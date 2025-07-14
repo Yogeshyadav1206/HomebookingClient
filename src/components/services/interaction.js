@@ -1,6 +1,6 @@
 export const getHomePageFromServer = async () => {
   try {
-    const response = await fetch("https://homebooking-server.vercel.app", {
+    const response = await fetch("https://homebookingserver-1.onrender.com", {
       credentials: "include", // ⬅️ this is required for session/cookie support
     });
 
@@ -17,7 +17,7 @@ export const getHomePageFromServer = async () => {
 };
 export const gethomelist = async () => {
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/homelist", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/homelist", {
       credentials: "include",
     });
 
@@ -34,7 +34,7 @@ export const gethomelist = async () => {
 
 export const getfavlist = async () => {
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/favouritelist", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/favouritelist", {
       credentials: "include",
     });
 
@@ -51,7 +51,7 @@ export const getfavlist = async () => {
 
 export const getBookings = async () => {
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/booking", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/booking", {
       credentials: "include",
     });
 
@@ -69,7 +69,7 @@ export const getBookings = async () => {
 export const gethomedetails = async (homeId) => {
   // console.log("Fetching home details for ID:", homeId);
   try {
-    const response = await fetch(`https://homebooking-server.vercel.app/homelist/${homeId}`, {
+    const response = await fetch(`https://homebookingserver-1.onrender.com/homelist/${homeId}`, {
       credentials: "include",
     });
 
@@ -87,7 +87,7 @@ export const gethomedetails = async (homeId) => {
 export const addToFav = async (homeId) => {
   console.log("Adding to favourites for home ID:", homeId);
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/fav", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/fav", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export const addToFav = async (homeId) => {
 export const removeFromFav = async (homeId) => {
   // console.log("removing from Fav for home ID:", homeId);
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/fav-remove", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/fav-remove", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -128,7 +128,7 @@ export const removeFromFav = async (homeId) => {
 
 export const getaddHome = async () => {
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/host/add-home", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/host/add-home", {
       credentials: "include",
     });
 
@@ -144,7 +144,7 @@ export const getaddHome = async () => {
 };
 export const getEditHome = async (homeId) => {
   try {
-    const response = await fetch(`https://homebooking-server.vercel.app/host/editHome/${homeId}`, {
+    const response = await fetch(`https://homebookingserver-1.onrender.com/host/editHome/${homeId}`, {
       credentials: "include",
     });
 
@@ -165,7 +165,7 @@ export const submitHome = async (formData, editing) => {
   //   "Form data as object:",
   //   Object.fromEntries(formData.entries())
   // );
-  const BACKEND_URL = "https://homebooking-server.vercel.app";
+  const BACKEND_URL = "https://homebookingserver-1.onrender.com";
   const url = editing
     ? `${BACKEND_URL}/host/editHome`
     : `${BACKEND_URL}/host/add-home`;
@@ -189,7 +189,7 @@ export const submitHome = async (formData, editing) => {
 
 export const getHostHomes = async () => {
   try {
-    const response = await fetch(`https://homebooking-server.vercel.app/host/hosthomelist`, {
+    const response = await fetch(`https://homebookingserver-1.onrender.com/host/hosthomelist`, {
       credentials: "include",
     });
 
@@ -206,7 +206,7 @@ export const getHostHomes = async () => {
 export const removeFromHost = async (homeId) => {
   // console.log("removing from host for home ID:", homeId);
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/host/removefromhost", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/host/removefromhost", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -227,7 +227,7 @@ export const removeFromHost = async (homeId) => {
 export const UserLogin = async (formData) => {
   // console.log("Form data as object 2:", Object.fromEntries(formData.entries()));
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/login", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/login", {
       method: "POST",
       body: formData,
       credentials: "include",
@@ -246,7 +246,7 @@ export const UserLogin = async (formData) => {
 };
 export const UserLogout = async () => {
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/logout", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/logout", {
       method: "POST",
       credentials: "include",
     });
@@ -265,7 +265,7 @@ export const UserLogout = async () => {
 export const UserSignUp = async (formData) => {
   // console.log("Form data as object 2:", Object.fromEntries(formData.entries()));
   try {
-    const response = await fetch("https://homebooking-server.vercel.app/signup", {
+    const response = await fetch("https://homebookingserver-1.onrender.com/signup", {
       method: "POST",
       body: formData,
       credentials: "include",

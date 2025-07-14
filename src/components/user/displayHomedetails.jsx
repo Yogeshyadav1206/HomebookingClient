@@ -29,7 +29,7 @@ const HomeDetails = ({ home }) => {
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-white/20">
           <div className="relative">
             <img
-              src={`https://homebooking-server.vercel.app/${home.photo}`}
+              src={`https://homebookingserver-1.onrender.com/${home.photo}`}
               alt={home.houseName || 'Home Image'}
               className="w-full h-80 md:h-50 object-cover"
             />
