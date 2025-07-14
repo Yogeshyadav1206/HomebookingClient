@@ -53,7 +53,7 @@ const HomesPage = ({ registeredHomes , setItems}) => {
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={`http://localhost:4003/${home.photo.replaceAll(" ", "%20")}`}
+                    src={`https://homebooking-server.vercel.app/${home.photo.replaceAll(" ", "%20")}`}
                     alt="Home photo"
                     className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
