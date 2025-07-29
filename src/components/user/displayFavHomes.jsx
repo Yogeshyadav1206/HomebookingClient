@@ -61,7 +61,7 @@ const FavouriteHomes = ({ favourites = [], setFavouritesHomes }) => {
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={`https://homebooking-server.vercel.app/${home.photo.replaceAll(" ", "%20")}`}
+                    src={`https://homebookingserver-1.onrender.com/${home.photo.replaceAll(" ", "%20")}`}
                     alt={home.houseName}
                     className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
